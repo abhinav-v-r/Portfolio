@@ -42,9 +42,27 @@ body{
     transition: 0.3s ease-in-out;
 
 }
-.logo:hover{
-    transform: scale(1,1);
+.logo {
+    font-size: 2.5rem; /* Adjust the size of the logo */
+    font-weight: bold; /* Make it bold */
+    display: inline-block;
+    letter-spacing: 2px; /* Adds spacing for a stylish look */
 }
+
+.dark-orange {
+    color: #FF8C00; /* Dark orange color for "Port" */
+}
+
+.white {
+    color: #FFFFFF; /* White color for "folio" */
+}
+
+.logo:hover .dark-orange,
+.logo:hover .white {
+    transform: scale(1.1); /* Slight scaling effect on hover */
+    transition: 0.3s ease-in-out; /* Smooth animation for hover */
+}
+
 
 span{
     background: linear-gradient(
@@ -84,4 +102,78 @@ span{
 }
 .gradient-btn:hover{
     transform: scale(1.0s);
+}
+
+section{
+    min-height: 100vh;
+    padding: 10rem 15%;
+
+}
+
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15rem;
+}
+.home-content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+}
+
+.home-content h1{
+    font-size: 8rem;
+    font-weight: 700;
+    margin-top:1.5rem;
+
+}
+.home-content h3{
+    margin: 1 rem 0;
+    font-size: 4rem;
+
+}
+.home-contentp{
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.8;
+}
+.home-img img{
+    width: 32vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px var(--main-color) ;
+    transition: 0.4s ease-in-out;
+}
+.home-img img:hover{
+    box-shadow: 0 0 25px var(--main-color);
+                0 0 50px var(--main-color);
+                0 0 100px var(--main-color);
+}   
+
+.social-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    padding: 1rem;
+    background: transparent;
+    border: 2px solid var(--main-color);
+    border-radius: 50%;
+    color: var(--main-color);
+    margin: 3rem 0.5rem;
+    transition: 0.3s ease-in-out;
+
+}
+
+.social-icons a:hover{
+    color: var(--text-color);
+    background-color: var(--main-color);
+    transform: scale(1.2)translateY(-5px);
+    box-shadow: 0 0 25px var(--main-color);
+}
+
+.btn-group{
+    display: flex;
+    gap: 1.5rem;
 }

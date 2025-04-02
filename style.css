@@ -50,11 +50,7 @@ body{
 }
 
 .dark-orange {
-    color: #FF8C00; /* Dark orange color for "Port" */
-}
-
-.white {
-    color: #FFFFFF; /* White color for "folio" */
+    color:var(--text-color); /* Dark orange color for "Port" */
 }
 
 .logo:hover .dark-orange,
@@ -73,15 +69,19 @@ span{
     background-clip: text;
     color: transparent;
 }
-.navbar a{
+.navbar a {
     font-size: 1.8rem;
-    color: var(--text-color);
+    color: var(--text-color); 
     margin-left: 4rem;
     font-weight: 500;
-    transition: 0.3s ease-in-out;
-    border-bottom: 3px solid var(--main-color);
-
+    transition: 0.3s ease-in-out; 
+    border-bottom: 3px solid transparent; 
 }
+
+.navbar a:hover {
+    border-bottom-color: var(--main-color); 
+}
+
 
 .gradient-btn{
     font-size: 1.8rem;
@@ -123,27 +123,34 @@ section{
     text-align: right;
 }
 
-.home-content h1{
+.home-content h1 {
     font-size: 8rem;
     font-weight: 700;
-    margin-top:1.5rem;
-
+    margin-top: 1.5rem;
 }
-.home-content h3{
-    margin: 1 rem 0;
-    font-size: 4rem;
 
+.home-content h1 .name {
+    white-space: nowrap; /* Ensures "Abhinav V R" stays on one line */
 }
-.home-contentp{
-    font-size: 1.5rem;
-    font-weight: 500;
-    line-height: 1.8;
+.home-content h3 {
+    font-size: 3rem; 
+    white-space: nowrap; 
+    font-weight: bold; 
+    color: var(--text-color); 
+}
+.home-content p {
+    font-size: 1.8rem; 
+    font-weight: 300; 
+    line-height: 1.5; 
+    text-align: justify; 
+    color: #CCCCCC; 
+    margin-top: 2rem;
 }
 .home-img img{
     width: 32vw;
     border-radius: 50%;
     box-shadow: 0 0 25px var(--main-color) ;
-    transition: 0.4s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 .home-img img:hover{
     box-shadow: 0 0 25px var(--main-color);
@@ -176,4 +183,34 @@ section{
 .btn-group{
     display: flex;
     gap: 1.5rem;
+}
+
+.btn{
+    display: inline-block;
+    padding: 1rem 3rem;
+    background-color: var(--main-color);
+    box-shadow: 0 0 25px var(--main-color);
+    border-radius: 3rem;
+    font-size: 1.8rem;
+    color: black;
+    border: 2px solid transparent;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+
+}
+.btn:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 25px var(--main-color);
+                0 0 50px var(--main-color);
+}
+.btn-group a:nth-of-type(1){
+    background-color: black;
+    color: var(--main-color)
+    border: 2px solid var(--main-color);
+    box-shadow: 0 0 25px transparent;
+}
+.btn-group a:nth-of-type(1):hover{
+    box-shadow:0 0 25px var(--main-color);
+    background-color: var(--main-color);
+    color: black;
 }
